@@ -50,7 +50,7 @@ export default {
     methods: {
         register() {
             this.error = "";
-            if (this.user && this.password && this.email) {
+            if (this.password && this.email) {
                 const auth = getAuth();
                 createUserWithEmailAndPassword(auth, this.email, this.password)
                     .then(userCredential => {
