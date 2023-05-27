@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      
+
       <router-link to="/" class="navbar-item">
         <img src="./assets/326663_language_web_icon.png" width="35" height="20">
-        <h1 class="title is-5 mx-2">Global news</h1>
+        <h1 class="title is-5 mx-2">GLOBAL NEWS</h1>
       </router-link>
       
       <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -30,14 +30,14 @@
             <router-link class="button is-light" to="/login">
               Iniciar sesión
             </router-link>
-            
+          
             <router-link class="button is-info" to="/user">Perfil</router-link>
           </div>
         </div>
       </div>
     </div>
   </nav>
-  <router-view v-on:user-logged-in="updateUserLoggedIn" />
+  <router-view v-on:user-logged-in="updateUserLoggedIn" />   
 </template>
 
 <script>
@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      loggedIn: false
+      loggedIn: false,
     };
   },
   methods: {
@@ -57,7 +57,7 @@ export default {
     }
   },
   created(){
-    
+   
   }
 };
 </script>

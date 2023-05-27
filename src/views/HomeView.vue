@@ -5,23 +5,24 @@
         <img src="@/assets/old-newspaper-g7ac72a0ea_1280.jpg" alt="">
       </div>
       <div class="column ml-4 cuerpo">
-        <h1 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam et iste quasi
-          laudantium nihil distinctio aliquid quisquam vero.</h1>
+        <h1 class="title">Bienvenidos a nuestra página web de noticias, tu fuente confiable para mantenerte informado
+          sobre los acontecimientos más relevantes.</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis exercitationem assumenda ad et? Molestiae
-          nihil rem labore ducimus rerum quas debitis sunt perferendis nisi optio eos natus saepe, ea porro.
+          Desde noticias locales hasta eventos internacionales, te ofrecemos información actualizada y objetiva. Explora
+          nuestras secciones y mantente al tanto de todo lo que sucede en el mundo.
         </p>
       </div>
     </div>
 
     <section class="noticias">
-      <router-link v-for="(noticia, id) in noticias" :key="id"
-        :to="{ name: 'NoticiaView', params: { id: id }, props: { noticia: noticia } }" class="noticia box">        
-          <h2 class="title is-5">{{ noticia.title }}</h2>
-          <img :src="noticia.urlToImage" alt="" class="mb-4">
-          <p class="mb-4">{{ noticia.content }}</p>
-          <h6>{{ noticia.publishedAt }}</h6>
-          <h6>{{ noticia.author }}</h6>        
+      <router-link v-for="noticia in noticias" :key="noticia"
+        :to="{ name: 'NoticiaView', params: { id: JSON.stringify(noticia) }, props: { noticia: noticia } }"
+        class="noticia box">
+        <h2 class="title is-5">{{ noticia.title }}</h2>
+        <img :src="noticia.urlToImage" alt="" class="mb-4">
+        <p class="mb-4">{{ noticia.content }}</p>
+        <h6>{{ noticia.publishedAt }}</h6>
+        <h6>{{ noticia.author }}</h6>
       </router-link>
     </section>
 
@@ -29,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'HomeView',
   components: {
@@ -69,7 +69,7 @@ export default {
   width: 80%;
   margin-top: 5%;
   margin-left: 10%;
-  text-align: left;  
+  text-align: left;
 }
 
 .noticia {
@@ -94,14 +94,14 @@ export default {
 }
 
 @media (max-width: 1225px) {
-  .noticias{
+  .noticias {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .noticia{
+
+  .noticia {
     width: 80%;
   }
 }
-
 </style>
