@@ -11,6 +11,7 @@
           Desde noticias locales hasta eventos internacionales, te ofrecemos información actualizada y objetiva. Explora
           nuestras secciones y mantente al tanto de todo lo que sucede en el mundo.
         </p>
+        <router-link to="about" class="button is-primary p-2 mt-5"><strong>Foro de discusión</strong></router-link>     
       </div>
     </div>
 

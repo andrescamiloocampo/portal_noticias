@@ -37,7 +37,7 @@
       </div>
     </div>
   </nav>
-  <router-view v-on:user-logged-in="updateUserLoggedIn" />   
+  <router-view v-on:user-logged-in="updateUserLoggedIn" />     
 </template>
 
 <script>

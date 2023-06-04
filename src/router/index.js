@@ -4,6 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import UserView from '../views/UserView.vue'
 import NoticiaView from '../components/NoticiaView.vue'
+import ArticuloView from '../components/ArticuloView.vue'
 const routes = [
   {
     path: '/',
@@ -35,6 +36,11 @@ const routes = [
     name: 'NoticiaView',
     component: NoticiaView,
     props:true
+  },
+  {
+    path: '/articulo/:id',
+    name: 'ArticuloView',
+    component: ArticuloView,    
   }
 ]
 

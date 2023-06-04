@@ -13,7 +13,7 @@
         <a :href="noticia.url">Fuentes</a>
       </div>
     </div>
-    <h1 class="title is-5">Discusión</h1>
+    <h1 class="title is-5">Opiniones</h1>
     <div class="box is-6 mt-3 mx-3 has-background-light rows" style="height: 200px; overflow-y: scroll;">
       <div class="box rounded column is-8" v-for="comentario in comentarios" :key="comentario">
         <h2 class="title is-6">{{ comentario.correo }}</h2>
@@ -23,8 +23,8 @@
     <form class="columns mb-5">
       <input class="input is-normal column is-6 ml-5" type="text" placeholder="Ingrese un comentario"
         v-model="comentario">
-      <button type="button" @click="agregarComentario" class="button is-primary column is-2 ml-3">Ingresar
-        comentario</button>
+      <button type="button" @click="agregarComentario" class="button is-primary column is-2 ml-3 p-2">
+      <strong>Ingresar comentario</strong></button>
     </form>
 
   </div>
